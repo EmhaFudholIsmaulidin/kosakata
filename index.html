@@ -25,7 +25,33 @@
         }
 
         .animate-pop {
-        animation: pop 0.2s ease-out;
+        	animation: pop 0.2s ease-out;
+        }
+        
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+        }
+
+        .popup.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .popup.hidden {
+            opacity: 0;
+            visibility: hidden;
         }
     </style>
 </head>
@@ -48,6 +74,9 @@
         <hr style="border-color: rgb(66, 4, 4)">
     </div>
     <div id="game" class="mx-auto max-w-lg">
+        <div id="popup" class="popup hidden">
+            <span id="popup-message"></span>
+        </div>
         <div class="column grid grid-rows-6 gap-1 text-3xl font-bold id="columns">
             <div class="row grid grid-cols-5 gap-1" id="row1">
                 <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
@@ -222,11 +251,10 @@
 
             if (letterStatesInRow.every(state => state === 'correct')) {
                 endGame(true);
-            } else if (currentRow === rows.length - 1) {
-                endGame(false);\
-            }  else {
-                moveToNextRow();
-            }
+            }else if (currentRow === rows.length - 1) { // Check if it's the last row
+        endGame(false); // End the game if it's the last row and the word was not guessed
+    }
+            
         }
 
         function getColorClass(state) {
@@ -304,12 +332,31 @@
                 element.classList.remove('animate-pop');
             }, { once: true });
         }
+        
+        function showPopup(message, duration = 2000) {
+            const popup = document.getElementById('popup');
+            const popupMessage = document.getElementById('popup-message');
+
+            popupMessage.textContent = message;
+            popup.classList.remove('hidden');
+            popup.classList.add('show');
+
+            setTimeout(() => {
+                popup.classList.remove('show');
+                popup.classList.add('hidden');
+            }, duration);
+        }
+        
+        function capitalizeFirstLetter(word) {
+            return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+        }
+        
         function endGame(isWin) {
             allowInput = false;
             if (isWin) {
-                alert('Kamu berhasil menebaknya!');
+                showPopup(`Kamu berhasil menebaknya!`);
             } else {
-                alert('Kamu kalah! Katanya adalah "${targetWord.toLowerCase()}". Coba lagi ya!');
+                showPopup(`Kamu kalah! Katanya adalah "${capitalizeFirstLetter(targetWord)}". Coba lagi ya!`);
             }
         }
     </script>
