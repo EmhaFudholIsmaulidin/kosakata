@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kosakata</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .font-tilt {
+            font-family: 'Tilt Warp', sans-serif;
+        }
+        @keyframes pop {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+        }
+
+        .animate-pop {
+        animation: pop 0.2s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-amber-100 font-tilt font-bold text-white">
+    <div class="header mx-20 text-center mb-5" id="name">
+        <div class="topbar flex flex-row justify-between items-center p-4">
+            <a href="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" fill="text-orange-900" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z"/>
+                    <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466"/>
+                </svg>
+            </a>
+            <div class="text-orange-900 font-bold text-5xl">Kosakata</div>
+            <a href="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" fill="text-orange-900" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                </svg>
+            </a>
+        </div>
+        <hr style="border-color: rgb(66, 4, 4)">
+    </div>
+    <div id="game" class="mx-auto max-w-lg">
+        <div class="column grid grid-rows-6 gap-1 text-3xl font-bold id="columns">
+            <div class="row grid grid-cols-5 gap-1" id="row1">
+                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
+                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
+                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
+                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
+                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
+            </div>
+            <div class="row grid grid-cols-5 gap-1" id="row2">
+                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
+                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
+                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
+                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
+                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
+            </div>
+            <div class="row grid grid-cols-5 gap-1" id="row3">
+                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
+                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
+                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
+                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
+                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
+            </div>
+            <div class="row grid grid-cols-5 gap-1" id="row4">
+                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
+                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
+                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
+                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
+                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
+            </div>
+            <div class="row grid grid-cols-5 gap-1" id="row5">
+                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
+                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
+                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
+                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
+                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
+            </div>
+            <div class="row grid grid-cols-5 gap-1" id="row6">
+                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
+                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
+                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
+                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
+                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
+            </div>
+        </div>
+        <div id="keyboard" class="mx-auto text-orange-200 my-5 py-2 rounded-lg bg-orange-300 flex flex-col space-y-1 justify-center">
+            <div id="topkey" class="flex flex-row justify-center">
+                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="Q">Q</button>
+                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="W">W</button>
+                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="E">E</button>
+                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="R">R</button>
+                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="T">T</button>
+                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="Y">Y</button>
+                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="U">U</button>
+                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="I">I</button>
+                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="O">O</button>
+                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="P">P</button>
+            </div>
+            <div id="middlekey" class="flex flex-row justify-center">
+                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="A">A</button>
+                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="S">S</button>
+                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="D">D</button>
+                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="F">F</button>
+                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="G">G</button>
+                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="H">H</button>
+                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="J">J</button>
+                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="K">K</button>
+                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="L">L</button>
+            </div>
+            <div id="bottomkey" class="flex flex-row justify-center">
+                <button class="key h-10 w-20 mx-0.5 rounded-lg bg-orange-900" data-key="Enter">Enter</button>
+                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="Z">Z</button>
+                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="X">X</button>
+                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="C">C</button>
+                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="V">V</button>
+                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="B">B</button>
+                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="N">N</button>
+                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="M">M</button>
+                <button class="key h-10 w-20 mx-0.5 rounded-lg bg-orange-900" data-key="Delete">Delete</button>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        
+        const rows = document.querySelectorAll('.row');
+        const keys = document.querySelectorAll('.key');
+        const targetWord = 'NEGUS';
+        let currentRow = 0;
+        let currentCol = 0;
+        let allowInput = true;
+
+        function isRowComplete(row) {
+            const cells = row.querySelectorAll('div');
+            return Array.from(cells).every(cell => cell.textContent.trim() !== '');
+        }
+
+        function moveToNextRow() {
+            if (currentRow < rows.length - 1) {
+                currentRow++;
+                currentCol = 0;
+                allowInput = true;
+            }else {
+                allowInput = false;
+            }
+        }
+
+        function getLetterState(letter, index, targetOccurrences, letterStates, targetWord) {
+            if (targetWord[index] === letter) {
+                letterStates[letter] = (letterStates[letter] || 0) + 1;
+                return 'correct';
+            }
+
+            if (targetWord.includes(letter)) {
+                if ((letterStates[letter] || 0) < targetOccurrences[letter]) {
+                    letterStates[letter] = (letterStates[letter] || 0) + 1;
+                    return 'wrong-position';
+                }
+            }
+
+            return 'incorrect';
+        }
+
+        function updateColors(row) {
+            const cells = row.querySelectorAll('div');
+            const letters = Array.from(cells).map(cell => cell.textContent.trim().toUpperCase());
+
+            const targetOccurrences = {};
+            Array.from(targetWord).forEach(letter => {
+                targetOccurrences[letter] = (targetOccurrences[letter] || 0) + 1;
+            });
+
+            const correctOccurrences = {};
+            const letterStatesInRow = Array(letters.length).fill('incorrect');
+
+            letters.forEach((letter, index) => {
+                if (targetWord[index] === letter) {
+                    letterStatesInRow[index] = 'correct';
+                    correctOccurrences[letter] = (correctOccurrences[letter] || 0) + 1;
+                }
+            });
+
+            letters.forEach((letter, index) => {
+                if (letterStatesInRow[index] === 'incorrect' && targetWord.includes(letter)) {
+                    const usedOccurrences = correctOccurrences[letter] || 0;
+                    const targetLetterCount = targetOccurrences[letter];
+
+                    if (usedOccurrences < targetLetterCount) {
+                        letterStatesInRow[index] = 'wrong-position';
+                        correctOccurrences[letter] = usedOccurrences + 1;
+                    }
+                }
+            });
+
+            letterStatesInRow.forEach((state, index) => {
+                const colorClass = getColorClass(state);
+                cells[index].classList.remove('border', 'border-4', 'border-yellow-500', 'border-orange-500');
+                cells[index].classList.add(...colorClass.split(' '));
+
+                updateKeyboardColor(letters[index], state, colorClass);
+            });
+
+            if (letterStatesInRow.every(state => state === 'correct')) {
+                endGame(true);
+            }
+        }
+
+        function getColorClass(state) {
+            switch (state) {
+                case 'correct': return 'text-orange-900 bg-green-500';
+                case 'wrong-position': return 'text-orange-900 bg-yellow-500';
+                default: return 'text-orange-900 bg-gray-100';
+            }
+        }
+
+        function updateKeyboardColor(letter, state, colorClass) {
+            const key = document.querySelector(`.key[data-key="${letter}"]`);
+            if (key) {
+                key.classList.add(...colorClass.split(' '));
+            }
+        }
+
+        function handleInput(value) {
+            if (!allowInput) return;
+
+            if (value === 'ENTER') {
+                const row = rows[currentRow];
+                if (isRowComplete(row)) {
+                    updateColors(row);
+                    if (allowInput) {
+                        moveToNextRow();
+                    }
+                }
+            } else if (value === 'BACKSPACE' || value === 'DELETE') {
+                if (currentCol > 0) {
+                    currentCol--;
+                    const tile = rows[currentRow].querySelector(`div:nth-child(${currentCol + 1})`);
+                    if (tile.previousElementSibling){
+                        tile.previousElementSibling.classList.add('border', 'border-orange-500');
+                        tile.previousElementSibling.classList.remove('border', 'border-yellow-500');
+                    }
+                    tile.textContent = '';
+                    tile.classList.remove('border', 'border-4', 'border-orange-500');
+                }
+            } else if (value.length === 1 && value.match(/[A-Z]/)) {
+                const tile = rows[currentRow].querySelector(`div:nth-child(${currentCol + 1})`);
+                tile.classList.add('animate-pop');
+                tile.addEventListener('animationend', () => {
+                    tile.classList.remove('animate-pop');
+                }, { once: true });
+                
+                if (currentCol >= 5){
+                    return;
+                }
+
+                if (tile.previousElementSibling){
+                    tile.previousElementSibling.classList.remove('border', 'border-4', 'border-orange-500');
+                    tile.previousElementSibling.classList.add('border', 'border-4', 'border-yellow-500');
+                }
+                tile.textContent = value;
+                tile.classList.add('border', 'border-4', 'border-orange-500');
+                currentCol = Math.min(currentCol + 1, rows[currentRow].children.length);
+            }
+        }
+
+        window.addEventListener('keydown', (e) => {
+            handleInput(e.key.toUpperCase());
+        });
+
+        keys.forEach(key => {
+            key.addEventListener('click', (e) => {
+                handleInput(e.target.dataset.key.toUpperCase());
+            });
+        });
+
+        function animatePop() {
+            const element = document.querySelector('.animate-pop');
+            element.classList.add('animate-pop');
+            element.addEventListener('animationend', () => {
+                element.classList.remove('animate-pop');
+            }, { once: true });
+        }
+        function endGame(isWin) {
+            allowInput = false;
+            if (isWin) {
+                alert('Congratulations! You guessed the word!');
+            } else {
+                alert('Game over! Better luck next time.');
+            }
+        }
+    </script>
+</body>
+</html>
