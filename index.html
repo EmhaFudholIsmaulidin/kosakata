@@ -57,15 +57,15 @@
     </style>
 </head>
 <body class="bg-amber-100 font-tilt font-bold text-white">
-    <div class="container flex flex-col justify-between mx-auto h-screen min-w-max max-w-max ">
-        <div class="header topbar text-center flex flex-row justify-between items-center py-4" id="name">
+    <div class="container flex flex-col justify-between h-screen mx-auto min-w-max max-w-max ">
+        <div class="header topbar text-center flex flex-row justify-between items-center pt-8" id="name">
             <a href="">
                 <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="text-orange-900" class="bi bi-arrow-counterclockwise hidden sm:block" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z"/>
                     <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466"/>
                 </svg>
             </a>
-            <div class="text-orange-900 px-10 font-bold text-3xl">Kosakata</div>
+            <img src="boc.png" alt="Image" class="w-48">
             <a href="">
                 <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="text-orange-900" class="bi bi-list hidden sm:block" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
@@ -121,40 +121,40 @@
                 </div>
             </div>
         </div>
-        <div id="keyboard" class="mx-auto mt-2 text-orange-200 bottom-0 px-4 py-2 rounded-lg bg-orange-300 flex flex-col space-y-1 justify-center">
+        <div id="keyboard" class="mx-auto mt-2 text-orange-200 bottom-0 sm:px-4 py-2 sm:rounded-lg bg-orange-300 flex flex-col space-y-1 justify-center">
             <div id="topkey" class="flex flex-row justify-center">
-                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="Q">Q</button>
-                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="W">W</button>
-                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="E">E</button>
-                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="R">R</button>
-                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="T">T</button>
-                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="Y">Y</button>
-                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="U">U</button>
-                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="I">I</button>
-                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="O">O</button>
-                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="P">P</button>
+                <button class="key h-12 sm:h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="Q">Q</button>
+                <button class="key h-12 sm:h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="W">W</button>
+                <button class="key h-12 sm:h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="E">E</button>
+                <button class="key h-12 sm:h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="R">R</button>
+                <button class="key h-12 sm:h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="T">T</button>
+                <button class="key h-12 sm:h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="Y">Y</button>
+                <button class="key h-12 sm:h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="U">U</button>
+                <button class="key h-12 sm:h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="I">I</button>
+                <button class="key h-12 sm:h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="O">O</button>
+                <button class="key h-12 sm:h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="P">P</button>
             </div>
             <div id="middlekey" class="flex flex-row justify-center">
-                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="A">A</button>
-                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="S">S</button>
-                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="D">D</button>
-                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="F">F</button>
-                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="G">G</button>
-                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="H">H</button>
-                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="J">J</button>
-                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="K">K</button>
-                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="L">L</button>
+                <button class="key h-12 sm:h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="A">A</button>
+                <button class="key h-12 sm:h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="S">S</button>
+                <button class="key h-12 sm:h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="D">D</button>
+                <button class="key h-12 sm:h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="F">F</button>
+                <button class="key h-12 sm:h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="G">G</button>
+                <button class="key h-12 sm:h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="H">H</button>
+                <button class="key h-12 sm:h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="J">J</button>
+                <button class="key h-12 sm:h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="K">K</button>
+                <button class="key h-12 sm:h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="L">L</button>
             </div>
             <div id="bottomkey" class="flex flex-row justify-center">
-                <button class="key h-8 w-14 mx-0.5 rounded-lg bg-orange-900" data-key="Enter">Enter</button>
-                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="Z">Z</button>
-                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="X">X</button>
-                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="C">C</button>
-                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="V">V</button>
-                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="B">B</button>
-                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="N">N</button>
-                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="M">M</button>
-                <button class="key h-8 w-16 mx-0.5 rounded-lg bg-orange-900" data-key="Delete">Delete</button>
+                <button class="key h-12 sm:h-8 w-14 mx-0.5 rounded-lg bg-orange-900" data-key="Enter">Enter</button>
+                <button class="key h-12 sm:h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="Z">Z</button>
+                <button class="key h-12 sm:h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="X">X</button>
+                <button class="key h-12 sm:h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="C">C</button>
+                <button class="key h-12 sm:h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="V">V</button>
+                <button class="key h-12 sm:h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="B">B</button>
+                <button class="key h-12 sm:h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="N">N</button>
+                <button class="key h-12 sm:h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="M">M</button>
+                <button class="key h-12 sm:h-8 w-16 mx-0.5 rounded-lg bg-orange-900" data-key="Delete">Delete</button>
             </div>
         </div>
     </div>
