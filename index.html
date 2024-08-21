@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
+    <script src="fw.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .font-tilt {
@@ -35,8 +36,8 @@
             transform: translate(-50%, -50%);
             background-color: rgba(0, 0, 0, 0.8);
             color: white;
-            padding: 20px;
-            border-radius: 8px;
+            padding: 20em;
+            border-radius: 8em;
             text-align: center;
             z-index: 1000;
             opacity: 0;
@@ -56,105 +57,104 @@
     </style>
 </head>
 <body class="bg-amber-100 font-tilt font-bold text-white">
-    <div class="header mx-20 text-center mb-5" id="name">
-        <div class="topbar flex flex-row justify-between items-center p-4">
+    <div class="container flex flex-col justify-between mx-auto h-screen min-w-max max-w-max ">
+        <div class="header topbar text-center flex flex-row justify-between items-center py-4" id="name">
             <a href="">
-                <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" fill="text-orange-900" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="text-orange-900" class="bi bi-arrow-counterclockwise hidden sm:block" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z"/>
                     <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466"/>
                 </svg>
             </a>
-            <div class="text-orange-900 font-bold text-5xl">Kosakata</div>
+            <div class="text-orange-900 px-10 font-bold text-3xl">Kosakata</div>
             <a href="">
-                <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" fill="text-orange-900" class="bi bi-list" viewBox="0 0 16 16">
+                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="text-orange-900" class="bi bi-list hidden sm:block" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
                 </svg>
             </a>
         </div>
-        <hr style="border-color: rgb(66, 4, 4)">
-    </div>
-    <div id="game" class="mx-auto max-w-lg">
-        <div id="popup" class="popup hidden">
+        <div id="popup" class="popup hidden p-5 font-light">
             <span id="popup-message"></span>
         </div>
-        <div class="column grid grid-rows-6 gap-1 text-3xl font-bold id="columns">
-            <div class="row grid grid-cols-5 gap-1" id="row1">
-                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
-                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
-                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
-                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
-                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
-            </div>
-            <div class="row grid grid-cols-5 gap-1" id="row2">
-                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
-                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
-                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
-                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
-                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
-            </div>
-            <div class="row grid grid-cols-5 gap-1" id="row3">
-                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
-                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
-                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
-                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
-                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
-            </div>
-            <div class="row grid grid-cols-5 gap-1" id="row4">
-                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
-                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
-                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
-                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
-                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
-            </div>
-            <div class="row grid grid-cols-5 gap-1" id="row5">
-                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
-                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
-                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
-                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
-                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
-            </div>
-            <div class="row grid grid-cols-5 gap-1" id="row6">
-                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
-                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
-                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
-                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
-                <div class="h-24 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16"></div>
+        <div id="boxes" class="boxes">
+            <div class="column grid grid-rows-6 gap-1 text-2xl mx-10 font-bold id="columns">
+                <div class="row grid grid-cols-5 gap-1" id="row1">
+                    <div class="aspect-w-1 aspect-h-1 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16 min-h-[3.5rem] min-w-[3.5rem]"> </div>
+                    <div class="aspect-w-1 aspect-h-1 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16 min-h-[3.5rem] min-w-[3.5rem]"> </div>
+                    <div class="aspect-w-1 aspect-h-1 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16 min-h-[3.5rem] min-w-[3.5rem]"> </div>
+                    <div class="aspect-w-1 aspect-h-1 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16 min-h-[3.5rem] min-w-[3.5rem]"> </div>
+                    <div class="aspect-w-1 aspect-h-1 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16 min-h-[3.5rem] min-w-[3.5rem]"> </div>
+                </div>
+                <div class="row grid grid-cols-5 gap-1" id="row2">
+                    <div class="aspect-w-1 aspect-h-1 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16 min-h-[3.5rem] min-w-[3.5rem]"> </div>
+                    <div class="aspect-w-1 aspect-h-1 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16 min-h-[3.5rem] min-w-[3.5rem]"> </div>
+                    <div class="aspect-w-1 aspect-h-1 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16 min-h-[3.5rem] min-w-[3.5rem]"> </div>
+                    <div class="aspect-w-1 aspect-h-1 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16 min-h-[3.5rem] min-w-[3.5rem]"> </div>
+                    <div class="aspect-w-1 aspect-h-1 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16 min-h-[3.5rem] min-w-[3.5rem]"> </div>
+                </div>
+                <div class="row grid grid-cols-5 gap-1" id="row3">
+                    <div class="aspect-w-1 aspect-h-1 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16 min-h-[3.5rem] min-w-[3.5rem]"> </div>
+                    <div class="aspect-w-1 aspect-h-1 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16 min-h-[3.5rem] min-w-[3.5rem]"> </div>
+                    <div class="aspect-w-1 aspect-h-1 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16 min-h-[3.5rem] min-w-[3.5rem]"> </div>
+                    <div class="aspect-w-1 aspect-h-1 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16 min-h-[3.5rem] min-w-[3.5rem]"> </div>
+                    <div class="aspect-w-1 aspect-h-1 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16 min-h-[3.5rem] min-w-[3.5rem]"> </div>
+                </div>
+                <div class="row grid grid-cols-5 gap-1" id="row4">
+                    <div class="aspect-w-1 aspect-h-1 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16 min-h-[3.5rem] min-w-[3.5rem]"> </div>
+                    <div class="aspect-w-1 aspect-h-1 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16 min-h-[3.5rem] min-w-[3.5rem]"> </div>
+                    <div class="aspect-w-1 aspect-h-1 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16 min-h-[3.5rem] min-w-[3.5rem]"> </div>
+                    <div class="aspect-w-1 aspect-h-1 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16 min-h-[3.5rem] min-w-[3.5rem]"> </div>
+                    <div class="aspect-w-1 aspect-h-1 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16 min-h-[3.5rem] min-w-[3.5rem]"> </div>
+                </div>
+                <div class="row grid grid-cols-5 gap-1" id="row5">
+                    <div class="aspect-w-1 aspect-h-1 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16 min-h-[3.5rem] min-w-[3.5rem]"> </div>
+                    <div class="aspect-w-1 aspect-h-1 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16 min-h-[3.5rem] min-w-[3.5rem]"> </div>
+                    <div class="aspect-w-1 aspect-h-1 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16 min-h-[3.5rem] min-w-[3.5rem]"> </div>
+                    <div class="aspect-w-1 aspect-h-1 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16 min-h-[3.5rem] min-w-[3.5rem]"> </div>
+                    <div class="aspect-w-1 aspect-h-1 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16 min-h-[3.5rem] min-w-[3.5rem]"> </div>
+                </div>
+                <div class="row grid grid-cols-5 gap-1" id="row6">
+                    <div class="aspect-w-1 aspect-h-1 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16 min-h-[3.5rem] min-w-[3.5rem]"> </div>
+                    <div class="aspect-w-1 aspect-h-1 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16 min-h-[3.5rem] min-w-[3.5rem]"> </div>
+                    <div class="aspect-w-1 aspect-h-1 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16 min-h-[3.5rem] min-w-[3.5rem]"> </div>
+                    <div class="aspect-w-1 aspect-h-1 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16 min-h-[3.5rem] min-w-[3.5rem]"> </div>
+                    <div class="aspect-w-1 aspect-h-1 bg-orange-900 rounded-xl flex items-center justify-center text-center leading-16 min-h-[3.5rem] min-w-[3.5rem]"> </div>
+                </div>
             </div>
         </div>
-        <div id="keyboard" class="mx-auto text-orange-200 my-5 py-2 rounded-lg bg-orange-300 flex flex-col space-y-1 justify-center">
+        <div id="keyboard" class="mx-auto mt-2 text-orange-200 bottom-0 absolute sm:bottom-0 sm:static px-4 py-2 rounded-lg bg-orange-300 flex flex-col space-y-1 justify-center">
             <div id="topkey" class="flex flex-row justify-center">
-                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="Q">Q</button>
-                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="W">W</button>
-                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="E">E</button>
-                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="R">R</button>
-                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="T">T</button>
-                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="Y">Y</button>
-                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="U">U</button>
-                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="I">I</button>
-                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="O">O</button>
-                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="P">P</button>
+                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="Q">Q</button>
+                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="W">W</button>
+                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="E">E</button>
+                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="R">R</button>
+                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="T">T</button>
+                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="Y">Y</button>
+                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="U">U</button>
+                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="I">I</button>
+                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="O">O</button>
+                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="P">P</button>
             </div>
             <div id="middlekey" class="flex flex-row justify-center">
-                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="A">A</button>
-                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="S">S</button>
-                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="D">D</button>
-                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="F">F</button>
-                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="G">G</button>
-                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="H">H</button>
-                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="J">J</button>
-                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="K">K</button>
-                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="L">L</button>
+                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="A">A</button>
+                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="S">S</button>
+                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="D">D</button>
+                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="F">F</button>
+                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="G">G</button>
+                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="H">H</button>
+                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="J">J</button>
+                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="K">K</button>
+                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="L">L</button>
             </div>
             <div id="bottomkey" class="flex flex-row justify-center">
-                <button class="key h-10 w-20 mx-0.5 rounded-lg bg-orange-900" data-key="Enter">Enter</button>
-                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="Z">Z</button>
-                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="X">X</button>
-                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="C">C</button>
-                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="V">V</button>
-                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="B">B</button>
-                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="N">N</button>
-                <button class="key h-10 w-10 mx-0.5 rounded-lg bg-orange-900" data-key="M">M</button>
-                <button class="key h-10 w-20 mx-0.5 rounded-lg bg-orange-900" data-key="Delete">Delete</button>
+                <button class="key h-8 w-14 mx-0.5 rounded-lg bg-orange-900" data-key="Enter">Enter</button>
+                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="Z">Z</button>
+                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="X">X</button>
+                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="C">C</button>
+                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="V">V</button>
+                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="B">B</button>
+                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="N">N</button>
+                <button class="key h-8 w-8 mx-0.5 rounded-lg bg-orange-900" data-key="M">M</button>
+                <button class="key h-8 w-16 mx-0.5 rounded-lg bg-orange-900" data-key="Delete">Delete</button>
             </div>
         </div>
     </div>
@@ -163,18 +163,20 @@
         
         const rows = document.querySelectorAll('.row');
         const keys = document.querySelectorAll('.key');
-        const array = [
-            'RkVORFk=', 'VU5IQVM=', 'TUFUSEg=', 'RlVET0w=', 'S1VSU0k=',
-            'R0VMQVM=', 'S0FMTEE=', 'SEFKSUQ=', 'SEFNU0E=', 'VU1NVUw=',
-            'VEFMSVQ=', 'RlJZQU4=', 'QU5HR0U=', 'Q0FIWVU='
-        ];
+        // const array = [
+        //     'RkVORFk=', 'VU5IQVM=', 'TUFUSEg=', 'RlVET0w=', 'S1VSU0k=',
+        //     'R0VMQVM=', 'S0FMTEE=', 'SEFKSUQ=', 'SEFNU0E=', 'VU1NVUw=',
+        //     'VEFMSVQ=', 'RlJZQU4=', 'QU5HR0U=', 'Q0FIWVU='
+        // ];
         
         // Function to decode Base64
-        function decodeBase64(encodedStr) {
-            return atob(encodedStr);
-        }
-        const encodedTargetWord = array[Math.floor(Math.random() * array.length)];
-        const targetWord = decodeBase64(encodedTargetWord);    
+        // function decodeBase64(encodedStr) {
+        //     return atob(encodedStr);
+        // }
+        const random = array[Math.floor(Math.random() * array.length)].toUpperCase();  
+        const targetWord = random;
+        console.log(targetWord);
+        
         let currentRow = 0;
         let currentCol = 0;
         let allowInput = true;
@@ -272,16 +274,28 @@
             }
         }
 
+        function isValidWord(word) {
+            return array.includes(word.toLowerCase());
+        }
+
         function handleInput(value) {
             if (!allowInput) return;
 
             if (value === 'ENTER') {
                 const row = rows[currentRow];
+                const cells = row.querySelectorAll('div');
+                const enteredWord = Array.from(cells).map(cell => cell.textContent.trim()).join('');
                 if (isRowComplete(row)) {
-                    updateColors(row);
-                    if (allowInput) {
-                        moveToNextRow();
+                    if (isValidWord(enteredWord)){
+                        updateColors(row);
+                        if (allowInput) {
+                            moveToNextRow();
+                        }
+                    } else {
+                        showPopup("Kata tidak ada!");
                     }
+                } else {
+                    showPopup("Huruf tidak lengkap!");
                 }
             } else if (value === 'BACKSPACE' || value === 'DELETE') {
                 if (currentCol > 0) {
@@ -356,7 +370,8 @@
             if (isWin) {
                 showPopup(`Kamu berhasil menebaknya!`);
             } else {
-                showPopup(`Kamu kalah! Katanya adalah "${capitalizeFirstLetter(targetWord)}". Coba lagi ya!`);
+                // showPopup(`Kamu kalah! Katanya adalah "${capitalizeFirstLetter(targetWord)}". Coba lagi ya!`);
+                showPopup(`Percobaanmu telah habis! Semangat! 😁`);
             }
         }
     </script>
