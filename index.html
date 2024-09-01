@@ -159,23 +159,27 @@
         </div>
     </div>
     <script>
-
-        
         const rows = document.querySelectorAll('.row');
         const keys = document.querySelectorAll('.key');
-        // const array = [
-        //     'RkVORFk=', 'VU5IQVM=', 'TUFUSEg=', 'RlVET0w=', 'S1VSU0k=',
-        //     'R0VMQVM=', 'S0FMTEE=', 'SEFKSUQ=', 'SEFNU0E=', 'VU1NVUw=',
-        //     'VEFMSVQ=', 'RlJZQU4=', 'QU5HR0U=', 'Q0FIWVU='
-        // ];
-        
-        // Function to decode Base64
-        // function decodeBase64(encodedStr) {
-        //     return atob(encodedStr);
-        // }
-        const random = array[Math.floor(Math.random() * array.length)].toUpperCase();  
-        const targetWord = random;
-        console.log(targetWord);
+
+        const random = array[Math.floor(Math.random() * array.length)].toUpperCase();
+
+        let gameNumber = parseInt(localStorage.getItem('gameNumber')) || 1;
+        let targetWord = "";
+
+        if (gameNumber === 1) {
+            targetWord = atob("TUVEQUw=");
+        } else if (gameNumber === 2) {
+            targetWord = atob("T0NFQU4=");
+        } else if (gameNumber === 3) {
+            targetWord = atob("Q0xBU1M=");
+        }
+
+        console.log("Current Game Number:", gameNumber);
+        console.log("Target Word:", targetWord);
+        gameNumber = (gameNumber % 3) + 1;
+
+        localStorage.setItem('gameNumber', gameNumber);
         
         let currentRow = 0;
         let currentCol = 0;
